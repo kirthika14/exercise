@@ -1,0 +1,10 @@
+const cs=require('fs');
+
+cs.readFile(__filename,  function cb1(err,data){   //first the filename and then the callback
+ cs.writeFile(__filename + '.copy',data,function cb2(err) {
+     //nesting of more callback
+     console.log('hiii')
+ });
+
+});
+console.log('TEST');
